@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.Menu">
+    <children>
+        <AnchorPane>
+            <VBox fx:id="SideBar" prefHeight="1080.0" prefWidth="323.0" style="-fx-background-color: #E33C17;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1597.0" AnchorPane.topAnchor="0.0">
+                <children>
+                    <Button mnemonicParsing="false" onAction="#SideBarPropiedades" prefHeight="139.0" prefWidth="323.0" style="-fx-background-color: #E33C17; -fx-border-color: #FFFFFF;" text="PROPIEDADES" textFill="WHITE">
+                        <font>
+                            <Font name="Comic Sans MS" size="22.0" />
+                        </font>
+                    </Button>
+                    <VBox fx:id="SubMenuPropiedades" prefHeight="200.0" prefWidth="100.0" visible="false">
+                        <children>
+                            <Button fx:id="BtnVerPropiedades" mnemonicParsing="false" prefHeight="102.0" prefWidth="342.0" style="-fx-background-color: transparent; -fx-border-color: #FFFFFF;" text="Ver Propiedades" textFill="WHITE" />
+                            <Button fx:id="BtnAgregarPropiedad" mnemonicParsing="false" prefHeight="102.0" prefWidth="342.0" style="-fx-background-color: transparent; -fx-border-color: #FFFFFF;" text="Agregar Propiedad" textFill="WHITE" />
+                        </children>
+                    </VBox>
+                    <Button mnemonicParsing="false" onAction="#SideBarClientes" prefHeight="133.0" prefWidth="363.0" style="-fx-background-color: #E33C17; -fx-border-color: #FFFFFF;" text="CLIENTES" textFill="WHITE">
+                        <font>
+                            <Font name="Comic Sans MS" size="22.0" />
+                        </font></Button>
+                    <VBox fx:id="SubMenuCliente" prefHeight="200.0" prefWidth="100.0" visible="false">
+                        <children>
+                            <Button fx:id="BtnVerClientes" mnemonicParsing="false" prefHeight="102.0" prefWidth="342.0" style="-fx-background-color: transparent; -fx-border-color: #FFFFFF;" text="Ver Clientes" textFill="WHITE" />
+                            <Button fx:id="BtnAgregarCliente" mnemonicParsing="false" prefHeight="102.0" prefWidth="342.0" style="-fx-background-color: transparent; -fx-border-color: #FFFFFF;" text="Agregar Cliente" textFill="WHITE" />
+                        </children></VBox>
+                    <Button mnemonicParsing="false" onAction="#SideBarContratos" prefHeight="133.0" prefWidth="363.0" style="-fx-background-color: #E33C17; -fx-border-color: #FFFFFF;" text="Contratos" textFill="WHITE">
+                        <font>
+                            <Font name="Comic Sans MS" size="22.0" />
+                        </font></Button>
+                    <VBox fx:id="SubMenuContratos" prefHeight="175.0" prefWidth="323.0" visible="false">
+                        <children>
+                            <Button fx:id="BtnVerContrato" mnemonicParsing="false" prefHeight="102.0" prefWidth="342.0" style="-fx-background-color: transparent; -fx-border-color: #FFFFFF;" text="Ver Contratos" textFill="WHITE" />
+                            <Button fx:id="BtnNuevoContrato" mnemonicParsing="false" prefHeight="102.0" prefWidth="342.0" style="-fx-background-color: transparent; -fx-border-color: #FFFFFF;" text="Nuevo Contrato" textFill="WHITE" />
+                        </children></VBox>
+                    <!-- BOTÓN SALIR -->
+                    <Button fx:id="BtnSalir" mnemonicParsing="false" onAction="#salirAplicacion" prefHeight="133.0" prefWidth="363.0" style="-fx-background-color: #E33C17; -fx-border-color: #FFFFFF;" text="SALIR" textFill="WHITE">
+                        <font>
+                            <Font name="Comic Sans MS" size="22.0" />
+                        </font>
+                    </Button>
+                </children>
+            </VBox>
+
+            <!-- Registrar Cliente -->
+            <AnchorPane fx:id="cRegistrar" layoutX="321.0" layoutY="44.0" prefHeight="1080.0" prefWidth="1599.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="321.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <Label layoutX="562.0" layoutY="72.0" prefHeight="64.0" prefWidth="345.0" text="Registrar Cliente">
+                    <font>
+                        <Font name="System Bold Italic" size="43.0" />
+                    </font>
+                </Label>
+                <Label layoutX="286.0" layoutY="165.0" text="Nombre">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Label>
+                <TextField fx:id="txtNombre" layoutX="286.0" layoutY="199.0" prefHeight="42.0" prefWidth="289.0">
+                    <font>
+                        <Font size="18.0" />
+                    </font></TextField>
+                <Label layoutX="899.0" layoutY="158.0" text="Apellido">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Label>
+                <TextField fx:id="txtApellido" layoutX="893.0" layoutY="185.0" prefHeight="42.0" prefWidth="289.0">
+                    <font>
+                        <Font size="18.0" />
+                    </font></TextField>
+                <Label layoutX="286.0" layoutY="253.0" text="DNI">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Label>
+                <TextField fx:id="txtDni" layoutX="286.0" layoutY="282.0" prefHeight="42.0" prefWidth="289.0">
+                    <font>
+                        <Font size="18.0" />
+                    </font></TextField>
+                <Label layoutX="286.0" layoutY="347.0" text="Teléfono">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Label>
+                <TextField fx:id="txtTelefono" layoutX="286.0" layoutY="378.0" prefHeight="42.0" prefWidth="289.0">
+                    <font>
+                        <Font size="18.0" />
+                    </font></TextField>
+                <Label layoutX="893.0" layoutY="258.0" text="Email">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Label>
+                <TextField fx:id="txtEmail" layoutX="893.0" layoutY="282.0" prefHeight="42.0" prefWidth="289.0">
+                    <font>
+                        <Font size="18.0" />
+                    </font></TextField>
+                <Label layoutX="891.0" layoutY="347.0" text="Tipo de Cliente">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Label>
+                <ComboBox fx:id="comboRol" layoutX="893.0" layoutY="377.0" prefHeight="42.0" prefWidth="289.0" style="-fx-font-size: 18;" />
+
+                <!-- NUEVO: Campo para asignar propiedad a propietario -->
+                <Label fx:id="lblPropiedadAsignar" layoutX="286.0" layoutY="494.0" text="Propiedad a Asignar" visible="false">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Label>
+                <ComboBox fx:id="cbPropiedadAsignar" layoutX="286.0" layoutY="519.0" prefHeight="42.0" prefWidth="289.0" style="-fx-font-size: 18;" visible="false" />
+
+                <Button layoutX="1058.0" layoutY="616.0" onAction="#registrarCliente" prefHeight="64.0" prefWidth="139.0" text="Registrar">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Button>
+                <Button layoutX="881.0" layoutY="616.0" onAction="#limpiarRegistrarC" prefHeight="64.0" prefWidth="139.0" text="Cancelar">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Button>
+            </AnchorPane>
+
+            <!-- Ver Clientes -->
+            <AnchorPane fx:id="verCliente" layoutX="321.0" layoutY="30.0" prefHeight="1080.0" prefWidth="1599.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="321.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <TableView fx:id="tablaCliente" layoutX="174.0" layoutY="157.0" prefHeight="684.0" prefWidth="994.0" style="-fx-font-size: 18;">
+                    <columns>
+                        <TableColumn fx:id="colNombre" prefWidth="147.0" text="Nombre" />
+                        <TableColumn fx:id="colApellido" prefWidth="125.0" text="Apellido" />
+                        <TableColumn fx:id="colDNI" prefWidth="126.0" text="DNI" />
+                        <TableColumn fx:id="colTelefono" prefWidth="153.0" text="Teléfono" />
+                        <TableColumn fx:id="colEmail" prefWidth="174.0" text="Email" />
+                        <TableColumn fx:id="colTipoCliente" prefWidth="135.19976806640625" text="Tipo" />
+                        <TableColumn fx:id="colEstadoCliente" prefWidth="135.19976806640625" text="Estado" />
+                    </columns>
+                </TableView>
+                <Button fx:id="regCli" layoutX="1031.0" layoutY="915.0" mnemonicParsing="false" onAction="#abrirRegistrarCliente" prefHeight="35.0" prefWidth="109.0" text="Registrar">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Button>
+                <Button fx:id="modCli" layoutX="835.0" layoutY="917.0" mnemonicParsing="false" onAction="#seleccionarClienteParaEditar" prefHeight="35.0" prefWidth="109.0" text="Modificar">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Button>
+                <Button fx:id="delCli" layoutX="174.0" layoutY="917.0" mnemonicParsing="false" onAction="#eliminarCliente" prefHeight="35.0" prefWidth="109.0" style="-fx-background-color: #ff4444; -fx-text-fill: white;" text="Eliminar">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Button>
+                <Label layoutX="577.0" layoutY="57.0" prefHeight="64.0" prefWidth="161.0" text="Clientes">
+                    <font>
+                        <Font name="System Bold Italic" size="43.0" />
+                    </font>
+                </Label>
+                <Button fx:id="Activar" layoutX="666.0" layoutY="917.0" mnemonicParsing="false" onAction="#activarCliente" prefHeight="35.0" prefWidth="109.0" text="Activar">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Button>
+                <Button fx:id="Desactivar" layoutX="540.0" layoutY="917.0" mnemonicParsing="false" onAction="#desactivarCliente" prefHeight="35.0" prefWidth="109.0" text="Desactivar">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Button>
+            </AnchorPane>
+
+            <!-- Modificar Cliente -->
+            <AnchorPane fx:id="modCliente" layoutX="321.0" prefHeight="1080.0" prefWidth="1599.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="321.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <Label layoutX="353.0" layoutY="170.0" text="Nombre">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Label>
+                <TextField fx:id="txtNombre1" layoutX="353.0" layoutY="204.0" prefHeight="42.0" prefWidth="289.0" promptText="Ingresa nombre del cliente">
+                    <font>
+                        <Font size="18.0" />
+                    </font></TextField>
+                <Label layoutX="848.0" layoutY="178.0" text="Apellido">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Label>
+                <TextField fx:id="txtApellido1" layoutX="848.0" layoutY="204.0" prefHeight="42.0" prefWidth="289.0" promptText="Ingresa apellido del cliente">
+                    <font>
+                        <Font size="18.0" />
+                    </font></TextField>
+                <Label layoutX="353.0" layoutY="305.0" text="DNI">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Label>
+                <TextField fx:id="txtDni1" layoutX="353.0" layoutY="332.0" prefHeight="42.0" prefWidth="289.0" promptText="Ingrese el DNI del cliente">
+                    <font>
+                        <Font size="18.0" />
+                    </font></TextField>
+                <Label layoutX="353.0" layoutY="442.0" text="Telefono">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Label>
+                <TextField fx:id="txtTelefono1" layoutX="353.0" layoutY="468.0" prefHeight="42.0" prefWidth="289.0" promptText="Ingrese el telefono del cliente">
+                    <font>
+                        <Font size="18.0" />
+                    </font></TextField>
+                <Label layoutX="848.0" layoutY="305.0" text="Email">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Label>
+                <TextField fx:id="txtEmail1" layoutX="848.0" layoutY="331.0" prefHeight="42.0" prefWidth="289.0" promptText="Ingrese el email del cliente">
+                    <font>
+                        <Font size="18.0" />
+                    </font></TextField>
+                <Button layoutX="1017.0" layoutY="655.0" mnemonicParsing="false" onAction="#guardarEdicionCliente" prefHeight="51.0" prefWidth="120.0" text="Modificar">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Button>
+                <Button layoutX="848.0" layoutY="655.0" mnemonicParsing="false" onAction="#cancelarEdicionCliente" prefHeight="51.0" prefWidth="120.0" text="Cancelar">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Button>
+                <Label layoutX="556.0" layoutY="80.0" prefHeight="51.0" prefWidth="358.0" text="Modificar Cliente">
+                    <font>
+                        <Font name="System Bold Italic" size="43.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="comboRol1" layoutX="848.0" layoutY="469.0" prefHeight="42.0" prefWidth="289.0" style="-fx-font-size: 18;" />
+                <Label layoutX="851.0" layoutY="441.0" text="Tipo Cliente">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+            </AnchorPane>
+
+            <!-- Registrar Propiedad -->
+            <AnchorPane fx:id="cRegistrarPropiedad" layoutX="321.0" prefHeight="1080.0" prefWidth="1599.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="321.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <Label layoutX="298.0" layoutY="196.0" text="Dirección">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Label>
+                <TextField fx:id="txtDireccion" layoutX="298.0" layoutY="226.0" prefHeight="42.0" prefWidth="289.0">
+                    <font>
+                        <Font size="18.0" />
+                    </font></TextField>
+                <Label layoutX="886.0" layoutY="196.0" prefHeight="27.0" prefWidth="48.0" text="Tipo">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Label>
+                <ComboBox fx:id="cbTipo" layoutX="886.0" layoutY="223.0" prefHeight="42.0" prefWidth="289.0" />
+                <Label layoutX="299.0" layoutY="303.0" text="Precio">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Label>
+                <TextField fx:id="txtPrecio" layoutX="298.0" layoutY="336.0" prefHeight="42.0" prefWidth="289.0">
+                    <font>
+                        <Font size="18.0" />
+                    </font></TextField>
+                <Label layoutX="677.0" layoutY="308.0" text="Moneda">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Label>
+                <ComboBox fx:id="cbMoneda" layoutX="672.0" layoutY="336.0" prefHeight="42.0" prefWidth="180.0" />
+                <Label layoutX="883.0" layoutY="308.0" text="Estado">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Label>
+                <ComboBox fx:id="cbEstado" layoutX="886.0" layoutY="336.0" prefHeight="42.0" prefWidth="289.0" />
+                <Label layoutX="298.0" layoutY="421.0" text="Metros Lote">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Label>
+                <TextField fx:id="txtMetrosLote" layoutX="298.0" layoutY="454.0" prefHeight="42.0" prefWidth="170.0" />
+                <Label layoutX="500.0" layoutY="426.0" text="Metros Cubiertos">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Label>
+                <TextField fx:id="txtMetrosCubiertos" layoutX="500.0" layoutY="456.0" prefHeight="42.0" prefWidth="170.0">
+                    <font>
+                        <Font size="18.0" />
+                    </font></TextField>
+                <Label layoutX="687.0" layoutY="426.0" text="Antigüedad">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Label>
+                <TextField fx:id="txtAntiguedad" layoutX="688.0" layoutY="456.0" prefHeight="42.0" prefWidth="120.0">
+                    <font>
+                        <Font size="18.0" />
+                    </font></TextField>
+                <Label layoutX="839.0" layoutY="426.0" text="Dormitorios">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Label>
+                <TextField fx:id="txtDormitorios" layoutX="836.0" layoutY="456.0" prefHeight="42.0" prefWidth="120.0">
+                    <font>
+                        <Font size="18.0" />
+                    </font></TextField>
+                <Label layoutX="981.0" layoutY="431.0" prefHeight="27.0" prefWidth="51.0" text="Baños">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Label>
+                <TextField fx:id="txtBanos" layoutX="977.0" layoutY="456.0" prefHeight="42.0" prefWidth="80.0">
+                    <font>
+                        <Font size="18.0" />
+                    </font></TextField>
+                <Label layoutX="1071.0" layoutY="431.0" text="Expensas">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Label>
+                <TextField fx:id="txtExpensas" layoutX="1071.0" layoutY="456.0" prefHeight="42.0" prefWidth="109.0">
+                    <font>
+                        <Font size="18.0" />
+                    </font></TextField>
+                <CheckBox fx:id="cbPileta" layoutX="297.0" layoutY="540.0" text="Pileta">
+                    <font>
+                        <Font size="18.0" />
+                    </font></CheckBox>
+                <CheckBox fx:id="cbCochera" layoutX="419.0" layoutY="540.0" text="Cochera">
+                    <font>
+                        <Font size="18.0" />
+                    </font></CheckBox>
+                <Label layoutX="300.0" layoutY="607.0" text="Descripción">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Label>
+                <TextField fx:id="txtDescripcion" layoutX="299.0" layoutY="644.0" prefHeight="39.0" prefWidth="886.0">
+                    <font>
+                        <Font size="18.0" />
+                    </font></TextField>
+                <Label layoutX="301.0" layoutY="716.0" text="Otros">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Label>
+                <TextField fx:id="txtOtros" layoutX="301.0" layoutY="749.0" prefHeight="35.0" prefWidth="886.0">
+                    <font>
+                        <Font size="18.0" />
+                    </font></TextField>
+                <Label layoutX="304.0" layoutY="830.0" text="Foto (URL)">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Label>
+                <TextField fx:id="txtFoto" layoutX="301.0" layoutY="863.0" prefHeight="35.0" prefWidth="886.0">
+                    <font>
+                        <Font size="18.0" />
+                    </font></TextField>
+                <Button layoutX="1078.0" layoutY="940.0" onAction="#registrarPropiedad" text="Registrar">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Button>
+                <Button layoutX="910.0" layoutY="940.0" onAction="#limpiarRegistrarP" text="Cancelar">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Button>
+                <Label layoutX="526.0" layoutY="72.0" prefHeight="64.0" prefWidth="407.0" text="Registrar Propiedad">
+                    <font>
+                        <Font name="System Bold Italic" size="43.0" />
+                    </font>
+                </Label>
+            </AnchorPane>
+
+            <!-- Ver Propiedades -->
+            <AnchorPane fx:id="verPropiedad" layoutX="321.0" layoutY="50.0" prefHeight="1080.0" prefWidth="1599.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="321.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <TableView fx:id="tablaPropiedad" layoutX="34.0" layoutY="108.0" prefHeight="818.0" prefWidth="1373.0" style="-fx-font-size: 18;">
+                    <columns>
+                        <TableColumn fx:id="colDireccion" prefWidth="120.0" text="Dirección" />
+                        <TableColumn fx:id="colTipo" prefWidth="80.0" text="Tipo" />
+                        <TableColumn fx:id="colPrecio" prefWidth="80.0" text="Precio" />
+                        <TableColumn fx:id="colMoneda" prefWidth="76.800048828125" text="Moneda" />
+                        <TableColumn fx:id="colEstado" prefWidth="63.199951171875" text="Estado" />
+                        <TableColumn fx:id="colMetrosLote" prefWidth="111.20001220703125" text="Metros Lote" />
+                        <TableColumn fx:id="colMetrosCubiertos" prefWidth="153.5999755859375" text="Metros Cubiertos" />
+                        <TableColumn fx:id="colDormitorios" minWidth="5.60009765625" prefWidth="110.39990234375" text="Dormitorios" />
+                        <TableColumn fx:id="colBanos" minWidth="0.0" prefWidth="60.0" text="Baños" />
+                        <TableColumn fx:id="colExpensas" prefWidth="90.400146484375" text="Expensas" />
+                        <TableColumn fx:id="colPileta" prefWidth="61.59979248046875" text="Pileta" />
+                        <TableColumn fx:id="colCochera" prefWidth="84.0" text="Cochera" />
+                        <TableColumn fx:id="colDescripcion" prefWidth="147.1998291015625" text="Descripción" />
+                        <TableColumn fx:id="colOtros" minWidth="4.0" prefWidth="132.8001708984375" text="Otros" />
+                        <TableColumn fx:id="colFoto" minWidth="0.800048828125" prefWidth="12.7999267578125" text="Foto" />
+                    </columns>
+                </TableView>
+
+                <!-- Botones de gestión de propiedades -->
+                <Button fx:id="btnAgregarPropiedad" layoutX="60.0" layoutY="991.0" prefHeight="39.0" prefWidth="109.0" text="Agregar">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Button>
+                <Button fx:id="btnModificarPropiedad" layoutX="187.0" layoutY="991.0" prefHeight="39.0" prefWidth="109.0" text="Modificar">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Button>
+                <Button fx:id="btnDesactivarPropiedad" layoutX="444.0" layoutY="991.0" prefHeight="39.0" prefWidth="109.0" text="Desactivar">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Button>
+                <Button fx:id="btnActivarPropiedad" layoutX="337.0" layoutY="991.0" prefHeight="39.0" prefWidth="90.0" text="Activar">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Button>
+                <Button fx:id="btnEliminarPropiedad" layoutX="673.0" layoutY="991.0" prefHeight="39.0" prefWidth="98.0" style="-fx-background-color: #ff4444; -fx-text-fill: white;" text="Eliminar">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Button>
+
+                <!-- Filtros -->
+                <Label layoutX="996.0" layoutY="951.0" prefHeight="17.0" prefWidth="109.0" text="Filtrar por:">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Label>
+                <ComboBox fx:id="cbFiltroEstado" layoutX="852.0" layoutY="991.0" prefHeight="42.0" prefWidth="198.0" />
+                <ComboBox fx:id="cbFiltroTipo" layoutX="1065.0" layoutY="990.0" prefHeight="42.0" prefWidth="198.0" />
+                <Label layoutX="544.0" layoutY="36.0" prefHeight="64.0" prefWidth="258.0" text="Propiedades">
+                    <font>
+                        <Font name="System Bold Italic" size="43.0" />
+                    </font>
+                </Label>
+            </AnchorPane>
+
+            <!-- Nuevo Contrato -->
+            <AnchorPane fx:id="cNuevoContrato" layoutX="321.0" layoutY="50.0" prefHeight="1080.0" prefWidth="1599.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="321.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+                <Label layoutX="281.0" layoutY="200.0" text="Propiedad">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Label>
+                <ComboBox fx:id="cbPropiedad" layoutX="279.0" layoutY="227.0" prefHeight="42.0" prefWidth="345.0" />
+                <Button layoutX="635.0" layoutY="227.0" onAction="#abrirRegistrarPropiedadDesdeContrato" prefHeight="35.0" prefWidth="49.0" text="+">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font></Button>
+
+                <Label layoutX="800.0" layoutY="200.0" text="Cliente">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Label>
+                <ComboBox fx:id="cbCliente" layoutX="800.0" layoutY="226.0" prefHeight="44.0" prefWidth="345.0" />
+                <Button layoutX="1156.0" layoutY="226.0" onAction="#abrirRegistrarClienteDesdeContrato" prefHeight="44.0" prefWidth="49.0" text="+">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font></Button>
+
+                <Label layoutX="281.0" layoutY="338.0" text="Tipo de Contrato">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Label>
+                <ComboBox fx:id="cbTipoContrato" layoutX="281.0" layoutY="365.0" prefHeight="42.0" prefWidth="205.0" />
+
+                <Label layoutX="520.0" layoutY="338.0" text="Fecha Inicio">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Label>
+                <DatePicker fx:id="dpFechaInicio" layoutX="521.0" layoutY="365.0" prefHeight="44.0" prefWidth="198.0" />
+
+                <Label layoutX="756.0" layoutY="338.0" text="Fecha Fin">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Label>
+                <DatePicker fx:id="dpFechaFin" layoutX="756.0" layoutY="364.0" prefHeight="44.0" prefWidth="198.0" />
+
+                <Label layoutX="1001.0" layoutY="338.0" text="Monto">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Label>
+                <TextField fx:id="txtMonto" layoutX="1001.0" layoutY="365.0" prefHeight="42.0" prefWidth="205.0">
+                    <font>
+                        <Font size="18.0" />
+                    </font></TextField>
+
+                <!-- CAMPOS DE ALQUILER (VISIBLES SOLO CUANDO SE SELECCIONE ALQUILER) -->
+                <Label fx:id="lblTipoAlquiler" layoutX="277.0" layoutY="491.0" text="Tipo de Alquiler" visible="false">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Label>
+                <ComboBox fx:id="cbTipoAlquiler" layoutX="277.0" layoutY="519.0" prefHeight="42.0" prefWidth="205.0" visible="false" />
+
+                <Label fx:id="lblPorcentajeAumento" layoutX="524.0" layoutY="491.0" text="Porcentaje Aumento (%)" visible="false">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Label>
+                <TextField fx:id="txtPorcentajeAumento" layoutX="524.0" layoutY="519.0" prefHeight="42.0" prefWidth="193.0" visible="false">
+                    <font>
+                        <Font size="18.0" />
+                    </font></TextField>
+
+                <Label fx:id="lblFrecuenciaAumento" layoutX="750.0" layoutY="491.0" text="Frecuencia Aumento" visible="false">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Label>
+                <ComboBox fx:id="cbFrecuenciaAumento" layoutX="750.0" layoutY="519.0" prefHeight="42.0" prefWidth="180.0" visible="false" />
+
+                <Label fx:id="lblIndiceAumento" layoutX="954.0" layoutY="491.0" text="Índice Aumento" visible="false">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Label>
+                <ComboBox fx:id="cbIndiceAumento" layoutX="954.0" layoutY="519.0" prefHeight="42.0" prefWidth="180.0" visible="false" />
+
+                <Label fx:id="lblServiciosIncluidos" layoutX="281.0" layoutY="624.0" text="Servicios Incluidos" visible="false">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Label>
+                <TextArea fx:id="txtServiciosIncluidos" layoutX="277.0" layoutY="651.0" prefHeight="169.0" prefWidth="939.0" visible="false">
+                    <font>
+                        <Font size="18.0" />
+                    </font></TextArea>
+
+                <Button layoutX="1107.0" layoutY="843.0" mnemonicParsing="false" onAction="#registrarContrato" prefHeight="51.0" prefWidth="109.0" text="Registrar">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Button>
+                <Button layoutX="955.0" layoutY="843.0" mnemonicParsing="false" onAction="#cancelarRegistroContrato" prefHeight="51.0" prefWidth="109.0" text="Cancelar">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Button>
+                <Label layoutX="578.0" layoutY="88.0" prefHeight="64.0" prefWidth="323.0" text="Nuevo Contrato">
+                    <font>
+                        <Font name="System Bold Italic" size="43.0" />
+                    </font>
+                </Label>
+            </AnchorPane>
+
+            <!-- Ver Contratos -->
+            <AnchorPane fx:id="verContratos" layoutX="327.2" layoutY="-3.0" prefHeight="1080.0" prefWidth="1595.0" visible="false" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="327.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-3.0">
+
+                <TableView fx:id="tablaContratos" layoutX="211.0" layoutY="177.0" prefHeight="644.0" prefWidth="1019.0" style="-fx-font-size: 18;">
+                    <columns>
+                        <TableColumn fx:id="colDireccionContrato" prefWidth="150.0" text="Dirección" />
+                        <TableColumn fx:id="colCliente" prefWidth="150.0" text="Cliente" />
+                        <TableColumn fx:id="colTipoContrato" prefWidth="80.0" text="Tipo" />
+                        <TableColumn fx:id="colFechaInicio" prefWidth="100.0" text="Fecha Inicio" />
+                        <TableColumn fx:id="colFechaFin" prefWidth="100.0" text="Fecha Fin" />
+                        <TableColumn fx:id="colMonto" prefWidth="100.0" text="Monto" />
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                </TableView>
+
+                <!-- Botones de gestión de contratos -->
+                <Button layoutX="211.0" layoutY="910.0" mnemonicParsing="false" onAction="#abrirNuevoContrato" text="Nuevo">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Button>
+                <Button layoutX="354.0" layoutY="910.0" mnemonicParsing="false" onAction="#seleccionarContratoParaEditar" text="Modificar">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Button>
+                <Button layoutX="520.0" layoutY="910.0" mnemonicParsing="false" onAction="#desactivarContrato" text="Desactivar">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Button>
+                <Button layoutX="690.0" layoutY="910.0" mnemonicParsing="false" onAction="#activarContrato" text="Activar">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Button>
+                <Button layoutX="859.0" layoutY="910.0" mnemonicParsing="false" onAction="#eliminarContrato" style="-fx-background-color: #ff4444; -fx-text-fill: white;" text="Eliminar">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Button>
+                <Button fx:id="btnGenerarRecibo" layoutX="1084.0" layoutY="904.0" mnemonicParsing="false" onAction="#generarRecibo" text="Generar Recibo">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Button>
+                <Label layoutX="532.0" layoutY="95.0" prefHeight="64.0" prefWidth="421.0" text="Gestion de Contratos">
+                    <font>
+                        <Font name="System Bold Italic" size="43.0" />
+                    </font>
+                </Label>
+            </AnchorPane>
+            <AnchorPane fx:id="BienvenidaPane" layoutX="581.0" layoutY="156.0" prefHeight="788.0" prefWidth="886.0">
+                <children>
+                    <ImageView fitHeight="530.0" fitWidth="666.0" layoutX="178.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@Fotitos/Logo.jpg" />
+                        </image>
+                    </ImageView>
+                    <Label layoutX="50.0" layoutY="659.0" prefHeight="64.0" prefWidth="819.0" text="TU SISTEMA DE GESTION INMOBILIARIA">
+                        <font>
+                            <Font name="System Bold Italic" size="43.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="311.0" layoutY="64.0" prefHeight="64.0" prefWidth="296.0" text="Bienvenido a">
+                        <font>
+                            <Font name="System Bold Italic" size="43.0" />
+                        </font>
+                    </Label>
+                </children>
+            </AnchorPane>
+
+        </AnchorPane>
+    </children>
+</StackPane>

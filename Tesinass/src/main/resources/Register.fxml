@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.text.Font?>
+<?import javafx.geometry.Insets?>
+
+<StackPane prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(to bottom right, #E33C17, #B82E0F);" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.RegisterController">
+    <children>
+        <Rectangle arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="460.0" width="550.0">
+            <effect>
+                <DropShadow blurType="GAUSSIAN" color="rgba(0,0,0,0.3)" height="10.0" radius="4.5" width="10.0" />
+            </effect>
+        </Rectangle>
+
+        <VBox alignment="TOP_CENTER" spacing="20.0" prefWidth="500.0">
+            <padding>
+                <Insets top="30.0" right="30.0" left="30.0" bottom="30.0" />
+            </padding>
+
+            <Label text="Registrar Usuario" style="-fx-text-fill: #E33C17; -fx-font-weight: bold;">
+                <font>
+                    <Font name="System Bold" size="28.0" />
+                </font>
+            </Label>
+            <HBox spacing="20.0" alignment="CENTER">
+                <VBox spacing="15.0" prefWidth="240.0">
+                    <VBox spacing="5.0">
+                        <Label text="Nombre del usuario" style="-fx-text-fill: #666;" />
+                        <TextField fx:id="IngreseNombre" promptText="Ingrese nombre aquí..."
+                                   style="-fx-background-color: #f5f5f5; -fx-border-color: #ddd; -fx-border-radius: 5; -fx-background-radius: 5;"
+                                   prefHeight="35.0" />
+                    </VBox>
+
+                    <VBox spacing="5.0">
+                        <Label text="Email" style="-fx-text-fill: #666;" />
+                        <TextField fx:id="IngreseEmail" promptText="Ingrese su email aquí..."
+                                   style="-fx-background-color: #f5f5f5; -fx-border-color: #ddd; -fx-border-radius: 5; -fx-background-radius: 5;"
+                                   prefHeight="35.0" />
+                    </VBox>
+                </VBox>
+
+                <VBox spacing="15.0" prefWidth="240.0">
+                    <VBox spacing="5.0">
+                        <Label text="Contraseña" style="-fx-text-fill: #666;" />
+                        <HBox spacing="5.0" alignment="CENTER_LEFT">
+                            <StackPane prefWidth="190.0" prefHeight="35.0">
+                                <PasswordField fx:id="IngreseContraseña" promptText="Ingrese su contraseña"
+                                               style="-fx-background-color: #f5f5f5; -fx-border-color: #ddd; -fx-border-radius: 5; -fx-background-radius: 5;"
+                                               prefHeight="35.0" prefWidth="190.0" />
+                                <TextField fx:id="VerContraseña" promptText="Ingrese su contraseña"
+                                           style="-fx-background-color: #f5f5f5; -fx-border-color: #ddd; -fx-border-radius: 5; -fx-background-radius: 5;"
+                                           visible="false" prefHeight="35.0" prefWidth="190.0" />
+                            </StackPane>
+                            <Button fx:id="Ojo1" text="👁"
+                                    style="-fx-background-color: #e0e0e0; -fx-border-radius: 5; -fx-background-radius: 5;"
+                                    prefHeight="35.0" prefWidth="40.0" />
+                        </HBox>
+                    </VBox>
+
+                    <VBox spacing="5.0">
+                        <Label text="Confirmar Contraseña" style="-fx-text-fill: #666;" />
+                        <HBox spacing="5.0" alignment="CENTER_LEFT">
+                            <StackPane prefWidth="190.0" prefHeight="35.0">
+                                <PasswordField fx:id="ConfirmarContraseña" promptText="Confirme su contraseña"
+                                               style="-fx-background-color: #f5f5f5; -fx-border-color: #ddd; -fx-border-radius: 5; -fx-background-radius: 5;"
+                                               prefHeight="35.0" prefWidth="190.0" />
+                                <TextField fx:id="VerReconfirmar" promptText="Confirme su contraseña"
+                                           style="-fx-background-color: #f5f5f5; -fx-border-color: #ddd; -fx-border-radius: 5; -fx-background-radius: 5;"
+                                           visible="false" prefHeight="35.0" prefWidth="190.0" />
+                            </StackPane>
+                            <Button fx:id="Ojo2" text="👁"
+                                    style="-fx-background-color: #e0e0e0; -fx-border-radius: 5; -fx-background-radius: 5;"
+                                    prefHeight="35.0" prefWidth="40.0" />
+                        </HBox>
+                    </VBox>
+                </VBox>
+            </HBox>
+
+            <Button fx:id="RegistrarBtn" text="Registrar nuevo usuario" onAction="#guardarUsuario"
+                    style="-fx-background-color: #E33C17; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5;"
+                    prefHeight="40.0" prefWidth="300.0" />
+        </VBox>
+    </children>
+</StackPane>

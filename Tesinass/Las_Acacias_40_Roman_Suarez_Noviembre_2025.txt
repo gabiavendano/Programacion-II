@@ -1,0 +1,42 @@
+RECIBO DE ALQUILER
+==================
+
+Fecha de Emisión: 06/11/2025
+Mes de Referencia: Noviembre 2025
+Fecha de Vencimiento: 16/11/2025
+
+CLIENTE:
+--------
+Nombre: Roman Suarez
+DNI: 41222162
+Teléfono: 55512345
+Email: TuRomanTico@gmail.com
+
+PROPIEDAD:
+----------
+Dirección: Las Acacias 40
+Tipo: Departamento
+Tipo de Alquiler: Vivienda Familiar
+
+DETALLES DEL PAGO:
+------------------
+Monto de Alquiler   : $ 500.000,00
+Servicios           : $ 0,00
+TOTAL               : $ 500.000,00
+
+==================================================
+
+Recibí del señor Roman Suarez
+la cantidad de $500.000,00
+correspondiente al alquiler de la propiedad ubicada en:
+Las Acacias 40
+para el mes de Noviembre 2025.
+
+
+
+_________________________
+Firma y sello
+
+INMOBILIARIA DEL CASTILLO
+Tel: 3541-557179| Email: delcastilloinmobiliariavcp@gmail.com
+Dirección: Villa Carlos Paz

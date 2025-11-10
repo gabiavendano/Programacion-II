@@ -1,0 +1,42 @@
+RECIBO DE ALQUILER
+==================
+
+Fecha de Emisión: 06/11/2025
+Mes de Referencia: Noviembre 2025
+Fecha de Vencimiento: 16/11/2025
+
+CLIENTE:
+--------
+Nombre: Laura Martinez
+DNI: 28999111
+Teléfono: 1144556677
+Email: laura.martinez@mail.com
+
+PROPIEDAD:
+----------
+Dirección: Calle San Martín 1200, 3°B
+Tipo: Departamento
+Tipo de Alquiler: Vivienda Familiar
+
+DETALLES DEL PAGO:
+------------------
+Monto de Alquiler   : $ 250.000,00
+Servicios           : $ 0,00
+TOTAL               : $ 250.000,00
+
+==================================================
+
+Recibí del señor Laura Martinez
+la cantidad de $250.000,00
+correspondiente al alquiler de la propiedad ubicada en:
+Calle San Martín 1200, 3°B
+para el mes de Noviembre 2025.
+
+
+
+_________________________
+Firma y sello
+
+INMOBILIARIA DEL CASTILLO
+Tel: 3541-557179| Email: delcastilloinmobiliariavcp@gmail.com
+Dirección: Villa Carlos Paz

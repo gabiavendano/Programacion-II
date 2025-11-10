@@ -1,0 +1,42 @@
+RECIBO DE ALQUILER
+==================
+
+Fecha de Emisión: 06/11/2025
+Mes de Referencia: Noviembre 2025
+Fecha de Vencimiento: 16/11/2025
+
+CLIENTE:
+--------
+Nombre: Jose Gomez
+DNI: 42565425
+Teléfono: 325125555
+Email: Jg@gmail..com
+
+PROPIEDAD:
+----------
+Dirección: Av villa del lago 550
+Tipo: Casa
+Tipo de Alquiler: Vivienda Familiar
+
+DETALLES DEL PAGO:
+------------------
+Monto de Alquiler   : $ 350.000,00
+Servicios           : $ 0,00
+TOTAL               : $ 350.000,00
+
+==================================================
+
+Recibí del señor Jose Gomez
+la cantidad de $350.000,00
+correspondiente al alquiler de la propiedad ubicada en:
+Av villa del lago 550
+para el mes de Noviembre 2025.
+
+
+
+_________________________
+Firma y sello
+
+INMOBILIARIA DEL CASTILLO
+Tel: 3541-557179| Email: delcastilloinmobiliariavcp@gmail.com
+Dirección: Villa Carlos Paz
